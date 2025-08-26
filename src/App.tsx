@@ -23,6 +23,7 @@ type FormData = {
 };
 
 const countries = [
+  "Nigeria",
   "United States",
   "Canada",
   "United Kingdom",
