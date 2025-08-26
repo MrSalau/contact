@@ -84,7 +84,6 @@ const ContactUs: React.FC = () => {
 
   return (
     <div className="px-4 py-16 min-h-screen flex flex-col relative">
-      {/* Fixed top-center success message */}
       {submitted && (
         <div className="fixed top-4 left-1/2 transform -translate-x-1/2 bg-blue-100 border border-blue-300 text-blue-800 px-6 py-3 rounded shadow-md z-50 text-center">
           Message sent successfully! 😊
@@ -150,8 +149,6 @@ const ContactUs: React.FC = () => {
 
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
             <h2 className="text-2xl font-bold text-blue-800">Contact Us</h2>
-
-            {/* Removed the inline success message here */}
 
             <div className="grid md:grid-cols-2 gap-4">
               <div>
