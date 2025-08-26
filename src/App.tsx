@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import {
   FaPhoneAlt,
@@ -283,10 +283,15 @@ const ContactUs: React.FC = () => {
             <div>
               <label className="text-sm font-semibold">Message</label>
               <textarea
-                {...register("message")}
+                {...register("message", {
+                  required: "Message is required",
+                })}
                 placeholder="Enter your message..."
-                className="border border-blue-300 p-2 rounded w-full h-32"
+                className="border border-blue-300 p-2 rounded w-full h-32 resize-none align-top"
               />
+              {errors.message && (
+                <p className="text-red-500 text-sm">{errors.message.message}</p>
+              )}
             </div>
 
             <div>
